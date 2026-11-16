@@ -378,11 +378,14 @@ Sugestão: **dois projetos Supabase** — `dev` (previews) e `prod` — com vari
 
 ## 12. Roadmap
 
-**Etapa 0 — Fundação** *(parte manual sua)*
-- [ ] Criar projeto(s) no Supabase; e-mail/senha ligado, **signups públicos desligados**, template de convite ajustado.
-- [ ] Importar o repositório na Vercel e configurar as variáveis (incluindo `SUPABASE_SERVICE_ROLE_KEY`).
-- [ ] Criar seu usuário no Supabase (*Add user*) e inserir o `user_id` em `admins`.
-- [ ] Eu: scaffold Next.js + Tailwind + shadcn (tema neutro), CI (lint/typecheck/test), clientes Supabase.
+**Etapa 0 — Fundação** *(passo a passo manual no [README](README.md))*
+- [x] Scaffold Next.js 16 + Tailwind 4 + shadcn (tema neutro), escrito sem rodar nada local.
+- [x] CI no GitHub Actions (lint, testes, build, tipos) + workflow manual para gerar o `package-lock.json`.
+- [x] Clientes Supabase (browser/server), proxy de sessão com proteção de `/painel` e `/admin`, cliente `service_role` server-only.
+- [ ] **Você:** criar projeto(s) no Supabase; e-mail/senha ligado, **signups públicos desligados**, template de convite ajustado.
+- [ ] **Você:** importar o repositório na Vercel e configurar as variáveis (incluindo `SUPABASE_SERVICE_ROLE_KEY`).
+- [ ] **Você:** criar seu usuário no Supabase (*Add user*). O `insert` em `admins` é feito na Etapa 1, depois da migration inicial (a tabela ainda não existe).
+- [ ] **Você:** rodar o workflow *Gerar package-lock* no GitHub e conferir o CI verde.
 
 **Etapa 1 — Acesso, admin e parâmetros**
 - [ ] Migration inicial: tabelas, RLS, triggers, função `minha_loja_id`, seed de card games.
